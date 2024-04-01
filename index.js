@@ -24,8 +24,19 @@ let notes = [
   },
 ];
 
-app.get("/", (require, response) => {
-  response.send("<h1>Hello World</h1>");
+app.get("/", (request, response) => {
+  response.send(`
+    <h1>Welcome to Notes API!</h1>
+    <p>This is a simple API for managing notes.</p>
+    <h2>Endpoints:</h2>
+    <ul>
+      <li><strong>GET /api/notes</strong>: Returns a list of all notes.</li>
+      <li><strong>GET /api/notes/:id</strong>: Returns a single note by its ID.</li>
+      <li><strong>POST /api/notes</strong>: Creates a new note.</li>
+      <li><strong>DELETE /api/notes/:id</strong>: Deletes a note by its ID.</li>
+    </ul>
+    <p>For more details, refer to the <a href="/api-docs">API Documentation</a>.</p>
+  `);
 });
 
 app.get("/api/notes", (request, response) => {
