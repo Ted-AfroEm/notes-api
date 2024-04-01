@@ -35,7 +35,7 @@ app.get("/", (request, response) => {
       <li><strong>POST /api/notes</strong>: Creates a new note.</li>
       <li><strong>DELETE /api/notes/:id</strong>: Deletes a note by its ID.</li>
     </ul>
-    <p>For more details, refer to the <a href="/api-docs">API Documentation</a>.</p>
+    <p>For more details, refer to the <a href="https://github.com/Ted-AfroEm/notes-api">repo</a>.</p>
   `);
 });
 
